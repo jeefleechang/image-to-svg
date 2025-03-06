@@ -99,9 +99,7 @@ A powerful tool for converting raster images (PNG, JPG, BMP) to scalable SVG vec
    - 实时预览SVG渲染效果
    - 点击"Download All"获取ZIP压缩包
 
-## 🌐 在线体验  
-[立即访问](https://your-tool-website.com)  
-*(此处替换为实际部署链接)*
+
 
 ---
 
