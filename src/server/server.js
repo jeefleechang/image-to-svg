@@ -36,8 +36,12 @@ ensureDirectoriesExist().catch(err => {
     console.error('创建目录失败:', err);
 });
 
-app.use(express.static('src/client'));
-app.use('/output', express.static('public/output'));
+app.use(express.static(path.join(__dirname, '../../src/client')));
+app.use('/output', express.static(path.join(__dirname, '../../public/output')));
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../../src/client/index.html'));
+});
 
 app.post('/convert', upload.array('images'), async (req, res) => {
     try {
@@ -78,6 +82,10 @@ app.post('/convert', upload.array('images'), async (req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
     console.log(`服务器运行在 http://localhost:${PORT}`);
-}); 
+  });
+}
+
+module.exports = app; 
