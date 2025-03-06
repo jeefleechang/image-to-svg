@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.upload-area {
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.upload-area:hover {
+    border-color: #666;
+}
+
+.upload-area.dragover {
+    border-color: #2196f3;
+    background: #e3f2fd;
+}
+
+.upload-hint {
+    color: #666;
+}
+
+.sub-hint {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.preview-area {
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.preview-item {
+    position: relative;
+    padding: 0.5rem;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+
+.preview-item img {
+    width: 100%;
+    height: auto;
+}
+
+.buttons {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+button {
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    background: #2196f3;
+    color: white;
+    cursor: pointer;
+    margin: 0 0.5rem;
+}
+
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.progress {
+    margin: 1rem 0;
+    background: #eee;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 4px;
+    background: #2196f3;
+    width: 0%;
+    transition: width 0.3s;
+}
+
+.options-panel {
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+}
+
+.color-picker {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.color-preview {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    margin: 0.5rem auto;
+}
+
+.status-message {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.status-message.error {
+    color: #f44336;
+    background: #ffebee;
+    border-radius: 4px;
+}
+
+.footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+} 

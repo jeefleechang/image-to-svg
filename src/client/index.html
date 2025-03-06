@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片转SVG工具</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>图片转SVG工具</h1>
+        
+        <div class="upload-area" id="dropZone">
+            <input type="file" id="fileInput" accept=".png,.jpg,.jpeg,.bmp" multiple hidden>
+            <div class="upload-hint">
+                <p>点击或拖拽文件到此处</p>
+                <p class="sub-hint">支持 PNG、JPG、BMP 格式</p>
+            </div>
+        </div>
+
+        <div class="preview-area" id="previewArea"></div>
+        
+        <div class="options-panel">
+            <div class="option">
+                <label>
+                    <input type="checkbox" id="autoColor" checked>
+                    自动分析颜色
+                </label>
+            </div>
+            <div class="color-picker">
+                <label for="svgColor">SVG颜色:</label>
+                <input type="color" id="svgColor" value="#000000">
+            </div>
+            <div class="color-adjustment">
+                <label for="colorBrightness">亮度:</label>
+                <input type="range" id="colorBrightness" min="-50" max="50" value="0">
+            </div>
+            <div class="color-adjustment">
+                <label for="colorSaturation">饱和度:</label>
+                <input type="range" id="colorSaturation" min="-50" max="50" value="0">
+            </div>
+        </div>
+        
+        <div class="buttons">
+            <button id="convertBtn" disabled>转换</button>
+            <button id="downloadBtn" disabled>下载</button>
+        </div>
+
+        <div class="progress" id="progressBar" hidden>
+            <div class="progress-bar"></div>
+        </div>
+        
+        <div id="statusMessage" class="status-message"></div>
+        
+        <footer class="footer">
+            <p>Copyright © 时震工作室</p>
+        </footer>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html> 
